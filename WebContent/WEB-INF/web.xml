@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>aprendendo jsp</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<filter>
+		<filter-name>conexaoFilter</filter-name>
+		<filter-class>br.com.aocp.filter.FilterConnection</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>conexaoFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>ClientePessoaContoller</display-name>
+		<servlet-name>ClientePessoaContoller</servlet-name>
+		<servlet-class>br.com.aocp.controller.ClientePessoaContoller</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ClientePessoaContoller</servlet-name>
+		<url-pattern>/ClientePessoaContoller</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<description></description>
+		<display-name>ClienteEmailContoller</display-name>
+		<servlet-name>ClienteEmailContoller</servlet-name>
+		<servlet-class>br.com.aocp.controller.ClienteEmailContoller</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ClienteEmailContoller</servlet-name>
+		<url-pattern>/ClienteEmailContoller</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>ClienteTelefoneContoller</display-name>
+		<servlet-name>ClienteTelefoneContoller</servlet-name>
+		<servlet-class>br.com.aocp.controller.ClienteTelefoneContoller</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ClienteTelefoneContoller</servlet-name>
+		<url-pattern>/ClienteTelefoneContoller</url-pattern>
+	</servlet-mapping>
+</web-app>
